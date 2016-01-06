@@ -1063,11 +1063,16 @@ class ADORecordSet_postgres64 extends ADORecordSet{
 				case 'NAME':
 				case 'BPCHAR':
 				case '_VARCHAR':
+				case '_INT8':
+				case '_INT4':
+				case '_INT2':
 				case 'INET':
 				case 'MACADDR':
 					if ($len <= $this->blobSize) return 'C';
 
 				case 'TEXT':
+				case 'JSON':
+				case 'XML':
 					return 'X';
 
 				case 'IMAGE': // user defined type

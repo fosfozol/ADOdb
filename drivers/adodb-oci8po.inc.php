@@ -1,6 +1,6 @@
 <?php
 /*
-@version   v5.21dev  ??-???-2015
+@version   v5.21.0-dev  ??-???-2016
 @copyright (c) 2000-2013 John Lim. All rights reserved.
 @copyright (c) 2014      Damien Regad, Mark Newnham and the ADOdb community
   Released under both BSD license and Lesser GPL library license.
@@ -95,11 +95,6 @@ class ADODB_oci8po extends ADODB_oci8 {
 class ADORecordset_oci8po extends ADORecordset_oci8 {
 
 	var $databaseType = 'oci8po';
-
-	function __construct($queryID,$mode=false)
-	{
-		parent::__construct($queryID,$mode);
-	}
 
 	function Fields($colname)
 	{
